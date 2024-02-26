@@ -1,0 +1,74 @@
+<!-- packers_and_movers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packers & Movers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #673ab7;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #673ab7;
+        }
+
+        .packer-mover {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e1bee7;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #673ab7;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Packers & Movers</h1>
+    </header>
+
+    <section>
+        <!-- Display packer and mover-specific information -->
+        {% for packerMover in packersMovers %}
+            <div class="packer-mover">
+                <h2>{{ packerMover.shop_name }}</h2>
+                <p><strong>Location:</strong> {{ packerMover.location }}</p>
+                <p><strong>Contact:</strong> {{ packerMover.contact }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        &copy; 2024 Your Packers & Movers App
+    </footer>
+</body>
+</html>

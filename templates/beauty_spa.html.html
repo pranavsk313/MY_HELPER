@@ -1,0 +1,75 @@
+<!-- beauty_spa.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Spa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff7e5f;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff7e5f;
+        }
+
+        .beauty-spa {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #ff7e5f;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beauty Spa</h1>
+    </header>
+
+    <section>
+        <!-- Display beauty spas specific to the "Beauty Spa" category -->
+        {% for spa in beauty_spa %}
+            <div class="beauty-spa">
+                <h2>{{ spa.shop_name }}</h2>
+                <p><strong>Location:</strong> {{ spa.location }}</p>
+                <p><strong>Contact:</strong> {{ spa.contact }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        &copy; 2024 Your Beauty Spa App
+    </footer>
+</body>
+</html>

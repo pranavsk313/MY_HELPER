@@ -1,0 +1,74 @@
+<!-- education.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682b4;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4682b4;
+        }
+
+        .institution {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #4682b4;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education</h1>
+    </header>
+
+    <section>
+        <!-- Display education-specific information -->
+        {% for institution in education %}
+            <div class="institution">
+                <h2>{{ institution.shop_name }}</h2>
+                <p><strong>Location:</strong> {{ institution.location }}</p>
+                <p><strong>Contact:</strong> {{ institution.contact }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        &copy; 2024 Your Education App
+    </footer>
+</body>
+</html>

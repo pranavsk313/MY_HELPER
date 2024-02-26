@@ -1,0 +1,32 @@
+<!-- create_shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Shop</title>
+</head>
+<body>
+    <h1>Create Shop</h1>
+    <form action="{{ url_for('add_shop') }}" method="post">
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="restaurants">Restaurants</option>
+            <option value="hotels">Hotels</option>
+            <option value="beauty_spa">Beauty Spa</option>
+            <!-- Add options for other categories... -->
+        </select>
+
+        <label for="shop_name">Shop Name:</label>
+        <input type="text" name="shop_name" id="shop_name" required>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" required>
+
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" id="contact" required>
+
+        <input type="submit" value="Save Shop">
+    </form>
+</body>
+</html>

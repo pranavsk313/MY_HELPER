@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shop</title>
+</head>
+<body>
+    <h1>Add Shop</h1>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li style="color: {% if 'error' in message %}red{% elif 'success' in message %}green{% endif %};">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/add_shop" method="post">
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="Restaurants">Restaurants</option>
+            <option value="Hotels">Hotels</option>
+            <option value="Beauty Spa">Beauty Spa</option>
+            <option value="Home Decor">Home Decor</option>
+            <option value="Wedding Requisites">Wedding Requisites</option>
+            <option value="Education">Education</option>
+            <option value="Hospitals">Hospitals</option>
+            <option value="Contractors">Contractors</option>
+            <option value="Pet Shops">Pet Shops</option>
+            <option value="Dentists">Dentists</option>
+            <option value="Gym">Gym</option>
+            <option value="Consultants">Consultants</option>
+            <option value="Event Organisers">Event Organisers</option>
+            <option value="Driving Schools">Driving Schools</option>
+            <option value="Packers & Movers">Packers & Movers</option>
+            <option value="Courier Service">Courier Service</option>
+        </select><br>
+
+        <label for="shop_name">Shop Name:</label>
+        <input type="text" id="shop_name" name="shop_name" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br>
+
+        <button type="submit">Add Shop</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <li><a class="nav-link scrollto" href="/logout">logout</a></li>
+    <h1>Dashboard</h1>
+    <ul>
+        <li><a href="{{ url_for('restaurants') }}">Restaurants</a></li>
+        <li><a href="{{ url_for('hotels') }}">Hotels</a></li>
+        <li><a href="{{ url_for('beauty_spa') }}">Beauty Spa</a></li>
+        <li><a href="{{ url_for('home_decor') }}">Home Decor</a></li>
+        <li><a href="{{ url_for('wedding_requisites') }}">Wedding Requisites</a></li>
+        <li><a href="{{ url_for('education') }}">Education</a></li>
+        <li><a href="{{ url_for('hospitals') }}">Hospitals</a></li>
+        <li><a href="{{ url_for('contractors') }}">Contractors</a></li>
+        <li><a href="{{ url_for('pet_shops') }}">Pet Shops</a></li>
+        <li><a href="{{ url_for('dentists') }}">Dentists</a></li>
+        <li><a href="{{ url_for('gym') }}">Gym</a></li>
+        <li><a href="{{ url_for('consultants') }}">Consultants</a></li>
+        <li><a href="{{ url_for('event_organisers') }}">Event Organisers</a></li>
+        <li><a href="{{ url_for('driving_schools') }}">Driving Schools</a></li>
+        <li><a href="{{ url_for('packers_movers') }}">Packers & Movers</a></li>
+        <li><a href="{{ url_for('courier_service') }}">Courier Service</a></li>
+        <!-- Add links for other categories... -->
+    </ul>
+</body>
+</html>

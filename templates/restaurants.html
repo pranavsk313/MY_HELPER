@@ -1,0 +1,30 @@
+<!-- restaurants.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Shop Name</th>
+                <th>Location</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for restaurant in restaurants %}
+            <tr>
+                <td>{{ restaurant.shop_name }}</td>
+                <td>{{ restaurant.location }}</td>
+                <td>{{ restaurant.contact }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- hospitals.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #dc143c;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #dc143c;
+        }
+
+        .hospital {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #dc143c;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospitals</h1>
+    </header>
+
+    <section>
+        <!-- Display hospital-specific information -->
+        {% for hospital in hospitals %}
+            <div class="hospital">
+                <h2>{{ hospital.shop_name }}</h2>
+                <p><strong>Location:</strong> {{ hospital.location }}</p>
+                <p><strong>Contact:</strong> {{ hospital.contact }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        &copy; 2024 Your Hospitals App
+    </footer>
+</body>
+</html>

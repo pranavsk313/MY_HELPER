@@ -1,0 +1,44 @@
+<!-- add_shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shop</title>
+</head>
+<body>
+    <h1>Add Shop</h1>
+    <form method="POST" action="{{ url_for('add_shop1') }}">
+        <label for="category">Select Category:</label>
+        <select name="category" id="category">
+            <option value="Restaurants">Restaurants</option>
+            <option value="Hotels">Hotels</option>
+            <option value="Beauty Spa">Beauty Spa</option>
+            <option value="Home Decor">Home Decor</option>
+            <option value="Wedding Requisites">Wedding Requisites</option>
+            <option value="Education">Education</option>
+            <option value="Hospitals">Hospitals</option>
+            <option value="Contractors">Contractors</option>
+            <option value="Pet Shops">Pet Shops</option>
+            <option value="Dentists">Dentists</option>
+            <option value="Gym">Gym</option>
+            <option value="Consultants">Consultants</option>
+            <option value="Event Organisers">Event Organisers</option>
+            <option value="Driving Schools">Driving Schools</option>
+            <option value="Packers & Movers">Packers & Movers</option>
+            <option value="Courier Service">Courier Service</option>
+        </select><br>
+
+        <label for="shop_name">Shop Name:</label>
+        <input type="text" name="shop_name" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" pattern="\d{10}" title="Enter a 10-digit number" required><br>
+
+        <input type="submit" value="Add Shop">
+    </form>
+</body>
+</html>

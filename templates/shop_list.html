@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop List</title>
+</head>
+<body>
+    <h1>Shop List</h1>
+
+    {% for shop in shops %}
+        <div>
+            <h3>{{ shop.shop_name }}</h3>
+            <p>Category: {{ shop.category }}</p>
+            <p>Location: {{ shop.location }}</p>
+            <p>Contact: {{ shop.contact }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>

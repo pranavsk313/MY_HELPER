@@ -1,0 +1,74 @@
+<!-- pet_shops.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shops</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        .pet-shop {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #dcedc8;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #4caf50;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Shops</h1>
+    </header>
+
+    <section>
+        <!-- Display pet shop-specific information -->
+        {% for petShop in petShops %}
+            <div class="pet-shop">
+                <h2>{{ petShop.shop_name }}</h2>
+                <p><strong>Location:</strong> {{ petShop.location }}</p>
+                <p><strong>Contact:</strong> {{ petShop.contact }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        &copy; 2024 Your Pet Shops App
+    </footer>
+</body>
+</html>
